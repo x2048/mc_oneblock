@@ -236,7 +236,11 @@ minetest.register_on_leaveplayer(function(p)
 	hud_remove_player(p)
 end)
 
-minetest.after(4, function()
+minetest.register_on_generated(function(minp, maxp, seed)
+    if minp.x > 0 or minp.y > 0 or minp.z > 0 or
+        maxp.x < 0 or maxp.y < 0 or maxp.z < 0 then
+        return
+    end
 	local node
 	node = minetest.get_node({x=0,y=0,z=0}) 
 	if node.name == "air" or node.name == "ignore" then
