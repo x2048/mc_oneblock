@@ -220,8 +220,11 @@ minetest.register_on_dignode(function(pos, oldnode, digger)
 end)
 
 minetest.register_on_respawnplayer(function(p)
-	p:set_pos({x=0,y=2,z=0})
-	return true
+    if (p:get_meta():get_string("mcl_beds:spawn") or "") == "" then
+        p:set_pos({x=0,y=2,z=0})
+        return true
+    end
+    return false
 end)
 
 minetest.register_on_newplayer(function(p)
