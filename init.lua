@@ -51,6 +51,7 @@ local loot = {
 		{node="mcl_core:stone", weight=30},
 		{node="mcl_core:dirt_with_grass", weight=30},
 		{node="mcl_core:gravel", weight=10},
+		{node="mcl_core:sand", weight=10},
 		{node="mcl_flowers:tallgrass", weight=10},
 	},
 	{
