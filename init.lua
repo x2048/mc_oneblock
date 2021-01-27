@@ -66,6 +66,8 @@ local loot = {
 		{node="mcl_core:water_source", weight=30},
 		{node="mcl_core:andesite", weight=10},
 		{node="mcl_flowers:tallgrass", weight=5},
+		{entity="mobs_mc:sheep", weight=3},
+		{entity="mobs_mc:pig", weight=2},
 		{node="mcl_flowers:rose_bush", weight=2}
 	},
 	{
